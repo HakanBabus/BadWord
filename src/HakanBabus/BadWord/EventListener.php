@@ -9,8 +9,10 @@ use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\event\Listener;
 
 class EventListener implements Listener{
+	
+    public BadWord $main;
 
-	public function __construct(BadWord $main) {
+    public function __construct(BadWord $main) {
     	$this->main = $main;
 	}
 
