@@ -1,3 +1,5 @@
 Badwords:
- - fuck
- - shit
+ fuck:
+  Space: false
+ ship:
+  Space: false
