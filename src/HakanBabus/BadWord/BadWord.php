@@ -21,8 +21,17 @@ class BadWord extends PluginBase implements Listener{
     public function onEnable() : void {
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         @mkdir($this->getDataFolder());
-        $this->cfg = new Config($this->getDataFolder() . "data.yml", Config::YAML);
-        $this->saveResource("data.yml");    
+        $this->cfg = new Config($this->getDataFolder() . "data.yml", Config::YAML, [
+            "Badwords" => [
+                "shit" => [
+                    "Space" => false
+                ],
+                "fuck" => [
+                    "Space" => false
+                ]
+            ]
+        ]);
+        $this->saveResource("data.yml");
     }
 
     public function getBadWords(): Array{
