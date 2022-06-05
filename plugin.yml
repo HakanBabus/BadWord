@@ -1,0 +1,6 @@
+---
+name: BadWord
+version: 0.0.1
+main: HakanBabus\BadWord\BadWord
+api: 4.0.0
+...
