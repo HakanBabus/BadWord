@@ -6,18 +6,13 @@ namespace HakanBabus\BadWord;
 
 use pocketmine\Server;
 use pocketmine\player\Player;
-use pocketmine\world\World;
-use pocketmine\world\WorldManager;
-
 use pocketmine\plugin\PluginBase;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use HakanBabus\CommandRegisterer\RegisterKomut;
 use pocketmine\utils\Config;
 
 use pocketmine\event\Listener;
-use pocketmine\math\Vector3;
 
 class BadWord extends PluginBase implements Listener{
 
