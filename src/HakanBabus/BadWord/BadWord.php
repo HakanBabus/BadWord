@@ -16,7 +16,7 @@ use pocketmine\event\Listener;
 
 class BadWord extends PluginBase implements Listener{
     
-    public Config cfg;
+    public Config $cfg;
 
     public function onEnable() : void {
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
