@@ -23,7 +23,6 @@ class BadWord extends PluginBase implements Listener{
 
     public function onEnable() : void {
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-        $this->getLogger()->info("BadWord - HakanBabus \nBu Plugini İzinsiz Paylaşmak Kesinlikle Yasaktır.");
         @mkdir($this->getDataFolder());
         $this->cfg = new Config($this->getDataFolder() . "data.yml", Config::YAML);
         $this->saveResource("data.yml");    
