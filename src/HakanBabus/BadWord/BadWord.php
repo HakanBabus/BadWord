@@ -20,8 +20,7 @@ class BadWord extends PluginBase implements Listener{
 
     public function onEnable() : void {
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-        @mkdir($this->getDataFolder());
-        $this->cfg = new Config($this->getDataFolder() . "data.yml", Config::YAML, [
+        $this->cfg = new Config($this->getDataFolder() . "/data.yml", Config::YAML, [
             "Badwords" => [
                 "shit" => [
                     "Space" => false
@@ -31,6 +30,11 @@ class BadWord extends PluginBase implements Listener{
                 ]
             ]
         ]);
+        foreach($this->cfg->get("Badwords") as $k => $v){
+            if(!isset($v["Space"])){
+                $this->getLogger()->error('Config error. Please add "Space" key in "$k" badword.');
+            }
+        }
         $this->saveResource("data.yml");
     }
 
