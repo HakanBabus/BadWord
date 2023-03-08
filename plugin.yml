@@ -1,7 +1,7 @@
 ---
 name: BadWord
 author: HakanBabus
-version: 0.0.2
+version: 1.0.0
 main: HakanBabus\BadWord\BadWord
 api: 4.0.0
 ...
