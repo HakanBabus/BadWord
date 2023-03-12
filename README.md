@@ -17,11 +17,17 @@ If the spaces are true, the word of the message is searched for swearing exactly
 If false, if the word contains swearing, the word is censored.
 
 # Example:
-Let's have a forbidden word in the name bad.
-Let the spaces true in this forbidden word.
+Config:
+```
+Badwords:
+ duck:
+  Space: true
+ bex:
+  Space: false
+```
 
-When bad is typed in chat, badword is censored.
-When badd is typed, the word is not censored.
+When i type duck on chat -> word is censored
+When i type duckkkkkk on chat -> world is not censored
 
-If the spaces were wrong:
-The word was censored when badd was typed.
+When i type bex on chat -> word is censored
+When i type bexxxxxxx on chat -> word is censored
