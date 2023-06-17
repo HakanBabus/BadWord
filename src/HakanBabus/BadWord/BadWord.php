@@ -4,14 +4,8 @@ declare(strict_types=1);
 
 namespace HakanBabus\BadWord;
 
-use pocketmine\Server;
-use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
-
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
 use pocketmine\utils\Config;
-
 use pocketmine\event\Listener;
 
 class BadWord extends PluginBase implements Listener{
@@ -30,19 +24,19 @@ class BadWord extends PluginBase implements Listener{
                 ]
             ]
         ]);
-        foreach($this->cfg->get("Badwords") as $k => $v){
+        foreach($this->cfg->get("Badwords") as $v){
             if(!isset($v["Space"])){
                 $this->getLogger()->error('Config error. Please add "Space" key in "$k" badword.');
             }
         }
-        $this->saveResource("data.yml");
     }
 
-    public function getBadWords(): Array{
+    public function getBadWords(): array{
         return $this->cfg->get("Badwords");
     }
 
-    public function createString(Int $length){
+    public function createString(int $length): string
+    {
         $str = "";
         for($i = 1; $i <= $length; $i++){
             $str = $str."*";
