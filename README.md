@@ -1,5 +1,5 @@
 # BadWord
-Pocketmine BadWord Blocker Plugin. (API 4)
+Pocketmine BadWord Blocker Plugin. (API 5)
 
 # Usage
 Go to plugin_data/BadWord/data.yml
